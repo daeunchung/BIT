@@ -79,6 +79,23 @@ public class MainClass {
 		}
 		System.out.println(num);
 		
+		
+//		 5. 입력받은 문자열이 모두 숫자로 되어 있는지 확인
+//		-> 숫자로 되어 있습니다.
+//		-> 숫자가 아닙니다.
+		
+		String strr = sc.next();
+		for(int i=0; i<strr.length(); i++)
+		{
+			if(strr.charAt(i) < '0' || '9' < strr.charAt(i) ) {
+				System.out.println("숫자가 아닙니다");
+				break;
+			}
+		}
+		System.out.println("숫자로 되어 있습니다");
+		
+		
+		
 	}
 
 }
