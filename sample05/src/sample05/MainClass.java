@@ -1,4 +1,7 @@
 package sample05;
+
+import java.util.Iterator;
+
 // 2022-06-03  09:00 AM
 
 public class MainClass {
@@ -65,7 +68,20 @@ public class MainClass {
 		
 		int ArrNum[][] = null;	// #define NULL (0x0000)
 
-
+		ArrNum = new int[3][];
+		int a1[] = {1,2,3};
+		ArrNum[0] = a1;
+		
+		int a2[] = {4,5,6,7};
+		ArrNum[1] = a2;
+		
+		int a3[] = {8,9};
+		ArrNum[2] = a3;
+		
+		for (int i = 0; i < ArrNum.length; i++) {
+			for (int j = 0; j < ArrNum[i].length; j++) {
+				System.out.print(ArrNum[i][j] + "\t");
+			}
+		}
 	}
-
 }
