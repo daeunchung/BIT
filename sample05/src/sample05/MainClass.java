@@ -60,8 +60,11 @@ public class MainClass {
 		num1 = num2;
 		num2 = temp;
 		
+		int numberArrayPosition[] = {1,2,3};
+		int numArrPos[] = numberArrayPosition;
 		
-		
+		int ArrNum[][] = null;	// #define NULL (0x0000)
+
 
 	}
 
