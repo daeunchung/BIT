@@ -54,11 +54,11 @@ public class MainClass {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(newfile.createNewFile()) {
-			System.out.println("파일 생성 성공 !");
-		}else  {
-			System.out.println("파일 생성 실패 !");
-		}
+//		if(newfile.createNewFile()) {
+//			System.out.println("파일 생성 성공 !");
+//		}else  {
+//			System.out.println("파일 생성 실패 !");
+//		}
 		
 		// 폴더 생성
 		File newDir = new File("C:\\Temp\\sub\\Dir");
