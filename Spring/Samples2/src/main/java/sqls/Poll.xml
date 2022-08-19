@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Poll">
+
+<select id="polllist" resultType="lotte.com.a.poll.PollDto">
+	select pollid, id, question, sdate, edate, itemcount, polltotal, regdate
+	from poll
+	order by sdate desc
+</select>
+
+<!-- 투표를 했는지 확인 -->
+<select id="isVoter" parameterType="lotte.com.a.poll.Voter"
+	resultType="Integer">
+	select ifnull(count(*), 0)
+	from voter
+	where pollid=#{pollid} and id=#{id}
+</select>
+
+<!-- 투표 만들기 -->
+<!-- 투표 주제 -->
+<insert id="makePoll" parameterType="lotte.com.a.poll.PollDto">
+	insert into poll(id, question, sdate, edate, itemcount, polltotal, regdate)
+	values(#{id}, #{question}, #{sdate}, #{edate}, #{itemcount}, 0, now())
+</insert>
+
+<!-- 투표 보기 -->
+<insert id="makePollSub" parameterType="lotte.com.a.poll.PollSubDto">
+	insert into pollsub(pollid, answer, acount)
+	values( (select ifnull(max(pollid), 0) from poll), #{answer}, 0 )
+</insert>
+
+<!-- 투표질의 -->
+<select id="getPoll" parameterType="lotte.com.a.poll.PollDto"
+	resultType="lotte.com.a.poll.PollDto">
+	select pollid, id, question, sdate, edate, itemcount, polltotal, regdate
+	from poll
+	where pollid=#{pollid}
+</select>
+
+<!-- 투표보기들 -->
+<select id="getPollSubList" parameterType="lotte.com.a.poll.PollDto"
+	resultType="lotte.com.a.poll.PollSubDto">
+	select pollsubid, pollid, answer, acount
+	from pollsub
+	where pollid=#{pollid}
+</select>
+
+<!-- 투표를 했을 때 -->
+<!-- 투표자 추가 -->
+<insert id="pollingVoter" parameterType="lotte.com.a.poll.Voter">
+	insert into voter(pollid, pollsubid, id, regdate)
+	values(#{pollid}, #{pollsubid}, #{id}, now())
+</insert>
+
+<!-- 어느 투표주제(통계) -->
+<update id="pollingPoll" parameterType="lotte.com.a.poll.Voter">
+	update poll
+	set polltotal=polltotal+1
+	where pollid=#{pollid}
+</update>
+
+<!-- 어느 투표보기(통계) -->
+<update id="pollingSub" parameterType="lotte.com.a.poll.Voter">
+	update pollsub
+	set acount=acount+1
+	where pollsubid=#{pollsubid} and pollid=#{pollid}
+</update>
+
+</mapper>
+
+
+
+
+
+
+
+
+

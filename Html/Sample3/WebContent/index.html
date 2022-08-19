@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- link: 연결 목적:이동 -->
+
+<a href="NewFile.html">NewFile 이동</a>
+<br><br>
+
+<a href="http://zum.com">Zum으로 이동</a>
+<br><br>
+
+<a href="NewFile.html">
+	<img alt="" src="./images/bird.png">
+</a>
+<br><br>
+
+<a href="NewFile.jsp?id=abc&pwd=123">NewFile.jsp</a>
+<br><br>
+
+<!-- form 
+		link의 목적이 있다.
+		JavaScript에서 접근하기 위해서
+		
+	Tag에 값을 전달시 attribute 	
+		id		: 현페이지	에서 하나만 인식한다. Javascript 접근
+		class	: 현페이지	에서 여러가지를 인식한다. CSS
+		name	: 주로 값을 전달시에 사용한다.
+-->
+
+<form action="NewFile.jsp">
+아이디:<input type="text" name="id" value="" placeholder="아이디">
+<br>
+패스워드:<input type="password" name="pwd" placeholder="패스워드">
+<br>
+
+<input type="submit" value="이동">
+</form>
+<br><br>
+
+<!-- html5  -->
+
+<!-- input : 입력 -->
+date:<input type="date" name="date">
+<br><br>
+
+range:<input type="range" max="10" min="0">
+<br><br>
+
+search:<input type="search">
+<br><br>
+
+color:<input type="color" value="#ffff00">
+<br><br>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

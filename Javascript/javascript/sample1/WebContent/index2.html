@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+변수(variable)
+<br>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+	// Integer, Double, String, char, boolean, [array, class => object로]
+	/*
+	 * MyClass cls = new MyClass();
+	 * YouClass ycls = new YouClass();
+	 
+	 * 
+	    stack   heap   static
+	    cls      ()
+	    
+	    
+	    64bit 컴퓨터 : 주소를 저장할 수 있는 크기가 64bit 라는 소리
+	 
+	    var , let
+	 
+	 */
+	v = 1;
+	var v;
+	// alert(v);
+	
+	// var v;	// 선언부는 어디에 놔도 (저 밑에 놔도) 문제가 발생하지 않는다.
+			// var v; 를 두번 썼는데 F12 보면 에러 X
+			// 그리하여 탄생한 것이 let
+			// 따라서 var 보다는 let을 많이 사용하는 추세이다
+			
+	// let 은 변수를 사용하기 '전'에 무조건 선언을 해주어야 하며 var 처럼 변수명이 같게끔 두번 선언할 수 없다.
+	/*
+	let l;
+	l = 2;
+	alert(l);
+	
+	let l;
+	*/
+	
+	let num = 123;
+	let pi = 3.141592;
+	let name = "홍길동";
+	let answer = true;
+	
+	num = 234 + 456;
+	
+	name = 345;
+	
+	// let strNum = num + name; // -> 123홍길동
+	
+	let strNum = "5" + 3 + 1;	// 531 문자열 concat
+	let numStr = 1 + 3 + "5";	// 45  연산후 문자열로
+	
+	// Array == object
+	// let	cars = [];
+	let cars = ['saab', 'volvo', 'bmw'];
+	console.log(cars[1]);
+	
+	cars = new Array(3);	
+	cars[0] = "사브";
+	cars[1] = "볼보";
+	cars[2] - "비엠더블유";
+	
+	console.log(cars[2]);
+	
+	for(let i =0; i<cars.length; i++){
+		console.log(cars[i]);
+	}
+	
+	for(i in cars){
+		// for-each 문인데 객체가 넘어오는 것이 아니고 번지수가 넘어온다.
+		console.log(cars[i]);
+	}
+	
+	cars.forEach(element => console.log(element));	// arrow 형태
+	
+	// object = HashMap (key:value) => json
+	let obj = {
+			firstname : "길동",
+			lastname : "홍",
+			age : 24,
+			// 변수형으로 함수를 작성 (instance 구나)
+			func : function(){
+				console.log('func 호출');
+			}
+	}
+	
+	console.log(obj.firstname);
+	console.log(obj.age);
+	obj.func();
+	
+	class Person{
+		constructor( name, age)
+		{
+			this.name = name;
+			this.age = age;
+		}
+		print(){
+			console.log(this.name + " " + this.age);
+		}
+	}
+
+	let per = new Person('홍길동', 24);
+	console.log(per.name);
+	
+	per.print();
+	
+	document.getElementById("demo").innerHTML 
+	= "홍길동" + typeof "홍길동" + "<br>"
+	+ "325" + typeof 325 + "<br>"
+	+ "3.14" + typeof 3.14 + "<br>"
+	+ "true" + typeof true + "<br>"
+	+ "array" + typeof [1,2,3] + "<br>"
+	+ "object" + typeof { num:1, name:'abc' };
+
+</script>
+
+
+
+</body>
+</html>

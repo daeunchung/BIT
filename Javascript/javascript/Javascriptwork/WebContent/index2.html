@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>체육관 이용 요금 1</h1>
+<p>기본 사용료(4시간) 40,800원</p><br>
+
+<input type="checkbox" id="light" name="vehicle1" value=20000 onclick="func(this)">
+<label for="">야간조명(20,000원)</label><br>
+
+<input type="checkbox" id="net" name="vehicle1" value=4000 onclick="func(this)">
+<label for="">배구 네트 x 2장(4,000원)</label><br>
+
+<input type="checkbox" id="ball" name="vehicle1" value=20000 onclick="func(this)">
+<label for="">배구공 x 10(20,000원)</label><br><br>
+
+합계금액 : <input type="text" id="cost" value= 40800> 원정
+
+<script type="text/javascript">
+function func()
+{
+	var tot = 0;	
+	if(document.getElementById('light').checked == true)
+		tot += parseInt(document.getElementById('light').value);
+	if(document.getElementById('net').checked == true)
+		tot += parseInt(document.getElementById('net').value);
+	if(document.getElementById('ball').checked == true)
+		tot += parseInt(document.getElementById('ball').value);
+	
+	document.getElementById('cost').value = parseInt(tot) + 40800;
+}
+</script>
+</body>
+</html>

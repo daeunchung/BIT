@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<title>카드</title>
+<style>
+/* 본문에 무관 스타일 */
+body {
+  padding-top: 2rem;
+}
+.container {
+  margin-bottom: 2rem;
+}
+</style>
+</head>
+<body>
+<h1 class="text-center mb-5">구성 요소 : 카드</h1>
+<h2 class="text-center mb-4">기본적인 사용 예</h2>
+<div class="container">
+
+  <div class="card mb-3" style="max-width: 25rem;">
+    <!-- 헤더 배경색 -->
+    <div class="card-header">헤더 기본 배경색</div>
+	    <div class="card-body">
+	      <h4 class="card-title">카드의 헤드 라인</h4>
+	      <p class="card-text">카드의 내용 문이 들어갑니다.</p>
+	    </div>
+    <!-- 바닥 글의 배경색 -->
+    <div class="card-footer">바닥 글 기본 배경색</div>
+  </div> 	
+
+  <!-- 카드의 테두리 : card -->
+  <div class="card" style="max-width: 25rem;">
+    <!-- 카드 상단에 배치되는 이미지 : card-img-top -->
+    <img class="card-img-top" src="http://placehold.it/318x180&text=img" alt="...">
+    <!-- 카드본문:card-body -->
+    <div class="card-body">
+      <!-- 카드 제목 :card-title -->
+      <h4 class="card-title">카드 제목</h4>
+      <!-- 카드의 내용 글 :card-text -->
+      <p class="card-text">카드의 내용 문장이 들어갑니다.</p>
+      <a href="#" class="btn btn-primary">버튼</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

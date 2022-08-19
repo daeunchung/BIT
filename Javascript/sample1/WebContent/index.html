@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+// 여기가 JavaScript 영역
+</script> 
+
+</head>
+<body>
+
+<!-- 
+		Java Script(front end) != Java(back end)
+		
+		front end (웹브라우저, 화면)
+		목적: 	web 접근
+				tag들을 접근하여 데이터를 취득, 수정
+				보조 프로그래밍 언어이다
+				컴파일을 하지 않는다 -> 빠르다 -> 가볍다
+				
+		TTS(Text to Speech) -> cloud(Restful)
+		
+		회원가입 -> 빈칸조사. id의 글자수, pw를 숫자 + 문자
+		CSS를 제어, 구현
+		Timer를 설정해서 특수효과들을 표현
+		
+		Java Script -> Jquery -> 엥글러 X		-> load X 
+						(ajax)	 react(axios)
+								 vue
+		
+		function
+		class
+		
+		접근자 	Attribute(속성), Property(특성)
+		
+		<h3 id="myh3">hello</h3>
+		<h3 class="myh3cls">hello</h3> 
+		<input type="text" name="name">
+		
+		element(요소)
+		id		-> 1개	: Javascript접근용
+		class	-> 다수	: Javascript접근용
+		name	-> 다수	: link			http://localhost:8090/sample?name=홍길동
+ -->
+ 
+<p id="demo">hello java script</p> 
+ 
+<script type="text/javascript">
+// 여기가 JavaScript 영역
+
+/*
+	범위 주석문  
+ */
+
+// console.log("Java Script가 실행되었습니다");
+// alert('Java Script가 실행');
+
+var v = document.getElementById('demo').innerHTML;	// getter
+// alert(v); 
+ 
+document.getElementById('demo').innerHTML = "안녕 자바스크립트";	// setter 
+
+
+</script> 
+
+
+
+</body>
+</html>
+
+
+
+
+
+

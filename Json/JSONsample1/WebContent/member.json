@@ -1,0 +1,20 @@
+[
+	{
+		"name":"정수동",
+		"age":23,
+		"address":"서울시",
+		"height":181.2
+	},
+	{
+		"name":"심청",
+		"age":14,
+		"address":"강원시",
+		"height":163.0
+	},
+	{
+		"name":"향단",
+		"age":13,
+		"address":"남원시",
+		"height":157.9
+	}
+]

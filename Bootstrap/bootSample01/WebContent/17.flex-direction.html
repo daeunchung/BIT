@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<title>유틸리티</title>
+
+<style>
+.d-flex {
+  background-color: rgba(255,0,0,.1);
+  margin-bottom: 2rem;
+}
+.d-flex > div {
+  background-color: #eee;
+  padding: .5em;
+  border: 1px solid #ccc;
+}
+</style>
+
+</head>
+<body>
+<h1 class="my-5 text-center">Flex 유틸리티</h1>
+<h2 class="my-5 text-center">flex 콘테이너의 주축방향을 설정하는 클래스</h2>
+<div class="container">
+  <h3>좌측으로부터 우측(flex-row)</h3>
+  <div class="d-flex flex-row">
+    <div>flex아이템01</div>
+    <div>flex아이템02</div>
+    <div>flex아이템03</div>
+  </div>
+  <h3>우측으로부터 좌측(flex-row-reverse)</h3>
+  <div class="d-flex flex-row-reverse">
+    <div>flex아이템01</div>
+    <div>flex아이템02</div>
+    <div>flex아이템03</div>
+  </div>
+  <h3>위로부터 밑으로(flex-column)</h3>
+  <div class="d-flex flex-column">
+    <div>flex아이템01</div>
+    <div>flex아이템02</div>
+    <div>flex아이템03</div>
+  </div>
+  <h3>밑에서 위로(flex-column-reverse)</h3>
+  <div class="d-flex flex-column-reverse">
+    <div>flex아이템01</div>
+    <div>flex아이템02</div>
+    <div>flex아이템03</div>
+  </div>
+</div>
+
+</body>
+</html>

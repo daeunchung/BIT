@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<title>JavaScript를 이용한 구성 요소 : 모달</title>
+<style>
+body {
+  padding-top: 2rem;
+}
+.container {
+  margin-bottom: 2rem;
+}
+</style>
+</head>
+<body>
+  <h1 class="text-center mb-5">JavaScript를 이용한 구성 요소 : 모달</h1>
+  <h2 class="text-center">모달 애니메이션 설정</h2>
+  <div class="container">
+    <!-- 전환 버튼 -->
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">전환 버튼</button>
+    
+    <!-- 모달 창 테두리 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- 모달 대화창 본체-->
+      <div class="modal-dialog" role="document">
+        <!-- 모달 콘텐츠 부분 -->
+        <div class="modal-content">
+          <!-- 모달 헤더ー -->
+          <div class="modal-header">
+            <!-- 모달 제목 -->
+            <h5 class="modal-title" id="exampleModalLabel">모달 제목</h5>
+            <!-- 닫기 아이콘 -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- 모달 본문 -->
+          <div class="modal-body">
+          	모달 본문이 들어갑니다.
+          </div>
+          <!-- 모달 꼬리말 -->
+          <div class="modal-footer">
+            <!-- 닫기 버튼 -->
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

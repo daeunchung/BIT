@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+form {
+	float: right;
+}
+</style>
+<!--  <script src="http://code.jquery.com/jquery-latest.min.js"></script>  -->
+</head>
+<body bgcolor="black">
+	<h1 style="color: white">사진들</h1>
+
+	<!--  <input type="image" src="images/image01.jpg" >  -->
+	<img alt="" src="images/image01.jpg" id="image">
+
+	<label style="color: white">사진의 선택</label>
+	<br>
+	<select id="ddlViewBy" onchange="refresh()">
+		<option value="images/image01.jpg">사진1</option>
+		<option value="images/image02.jpg">사진2</option>
+		<option value="images/image03.jpg">사진3</option>
+		<option value="images/image04.jpg">사진4</option>
+	</select>
+
+	<script type="text/javascript">
+	function refresh(){
+		// obj.src = document.getElementById('ddlViewBy').value
+		// document.getElementById('image').src = document.getElementById('ddlViewBy').
+		
+		var select = document.getElementById('ddlViewBy');
+		var value = select.options[select.selectedIndex].value;
+		document.getElementById('image').src = value;
+	}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<h2>변수의 연산</h2>
+<p>a, b 에 대해서 변수 a와 b 의 계산 결과를 표시합니다.</p>
+<button onclick="add()">덧셈</button>
+<button onclick="sub()">뺄셈</button>
+<button onclick="mul()">곱셈</button>
+<button onclick="div()">나눗셈</button>
+<button onclick="rem()">나머지</button>
+<br><br>
+
+<input id="first">
+<input id="operator">
+<input id="second">
+ = 
+<input id="result">
+
+<script type="text/javascript">
+// 'document.querySelector'를 이용하여 기능을 구현하고자 하는 html의 엘리먼트들을 가져옴.
+	// $('#result').val() -> what? jQuery?
+			
+function add(){
+	document.getElementById('operator').value = '+';
+	document.getElementById('result').value 
+	= parseInt(document.getElementById('first').value)
+	+ parseInt(document.getElementById('second').value);
+}
+function sub(){
+	document.getElementById('operator').value = '-';
+	document.getElementById('result').value 
+	= parseInt(document.getElementById('first').value)
+	- parseInt(document.getElementById('second').value);
+}
+function mul(){
+	document.getElementById('operator').value = '*';
+	document.getElementById('result').value 
+	= parseInt(document.getElementById('first').value)
+	* parseInt(document.getElementById('second').value);
+}
+function div(){
+	document.getElementById('operator').value = '/';
+	document.getElementById('result').value 
+	= parseInt(document.getElementById('first').value)
+	/ parseInt(document.getElementById('second').value);
+}
+function rem(){
+	document.getElementById('operator').value = '%';
+	document.getElementById('result').value 
+	= parseInt(document.getElementById('first').value)
+	% parseInt(document.getElementById('second').value);
+}
+
+</script>
+</body>
+</html>

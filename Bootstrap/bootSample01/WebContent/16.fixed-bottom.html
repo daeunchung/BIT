@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<title>유틸리티</title>
+<style>
+.box {
+  height: 1000px;
+  background-color: #eee;
+}
+#nav {
+ height: 56px;
+}
+</style>
+</head>
+<body id="top">
+<h1 class="my-5 text-center">Position유틸리티</h1>
+<h2 class="my-5 text-center">최하단에 고정하는 클래스(fixed-bottom)</h2>
+<div class="container">
+
+  <div class="fixed-bottom py-3 px-3 bg-dark text-center" id="nav">
+  	<a href="#test" class="text-light">#test로</a>
+  </div>
+  
+  <h3 id="test">#test</h3>
+  
+  <div class="box">이 상자에는 높이 1000px이 설정되어 있습니다.</div>
+  
+</div>
+
+</body>
+</html>

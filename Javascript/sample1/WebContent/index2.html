@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+변수(variable)
+<br>
+
+<p id="demo"></p>
+
+
+<script type="text/javascript">
+// Integer, Double, String, char, boolean, array, class
+/*
+ 	MyClass cls = new MyClass();
+ 	YouClass ycls = new YouClass();
+ 	
+ 	Object obj = new YouClass(); 	
+ 	
+ 	stack heap static
+	cls	   ()
+	
+	
+	var, let
+	
+*/
+
+/*
+	v = 1;
+	var v;
+	// alert(v);
+	
+	
+	let l;
+	l = 2;
+	alert(l);
+	
+	let l;
+*/
+
+	let num = 123;
+	let pi = 3.141592;
+	let name = "홍길동";
+	let answer = true;
+	
+	num = 234 + 456;	
+	name = 345;
+	
+//	let strNum = num + name; //  123홍길동 
+
+	let strNum = "5" + 3 + 1;	// 531
+	let numStr = 1 + 3 + "5";	// 45
+	
+	// Array == object
+//	let cars = [];
+	let cars = [ 'saab', 'volvo', 'bmw' ];
+	console.log(cars[1]);
+	
+	cars = new Array(3);
+	cars[0] = "사브";
+	cars[1] = "볼보";
+	cars[2] = "비엠더블유";
+	
+	console.log(cars[2]);
+	
+	for(i = 0;i < cars.length; i++){
+		console.log(cars[i]);
+	}
+	for(i in cars){
+		console.log(cars[i]);
+	}
+	
+	cars.forEach(element => console.log(element));
+	
+	// object = HashMap (key:value) => json
+	let obj = {
+			firstname:"길동",
+			lastname:"홍",
+			age:24,
+			func:function(){
+				console.log('func 호출');
+			}
+	}
+	
+	console.log(obj.firstname);
+	console.log(obj.age);
+	obj.func();
+	
+	class Person{		
+		constructor(name, age){
+			this.name = name;
+			this.age = age;
+		}
+		print(){
+			console.log(this.name + " " + this.age);
+		}		
+	}
+	
+	let per = new Person('홍길동', 24);
+	console.log(per.name);
+	per.print();
+	
+	document.getElementById("demo").innerHTML 
+		= 		"홍길동 " + typeof "홍길동" + "<br>"
+			+	"325 " + typeof 325 + "<br>"
+			+ 	"3.14 "+ typeof 3.14 + "<br>"
+			+	"true " + typeof true + "<br>"
+			+ 	"array "+ typeof [1, 2, 3] + "<br>"
+			+	"object "+ typeof { num:1, name:'abc' };  
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

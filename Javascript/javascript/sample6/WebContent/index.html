@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<!-- 
+<body onload="checkMessage()">
+onload 는 문서가 시작될때 딱 한번만 실행된다.
+
+onload
+<p id = "p1"></p>
+
+<script type="text/javascript">
+
+let = 
+function checkMessage(){
+	document.getElementById('p1').innerHTML = 'checkMessage() 호출';
+	
+	
+}
+</script>
+-->
+
+
+<!-- 
+<body onload="viewScroll()">
+
+<pre>
+러시아군이 주요 7개국(G7) 정상회의를 앞두고 우크라이나에 미사일 공격을 가했습니다.
+
+현지시간 26일 CNN과 로이터 통신 등 외신에 따르면 러시아군은 지난 25일부터 26일까지 이틀간 키이우와 체르니히우 등에 미사일을 쐈습니다.
+
+
+우크라이나 당국 관계자는 "키이우 중심부 주택가와 유치원 등이 공격을 당해 1명이 숨지고 6명이 다쳤다"고 전했습니다.
+
+
+비탈리 클리치코 키이우 시장은 텔레그램을 통해 "러시아군이 키이우를 폭격한 건 3주 만"이라며 "북대서양조약기구(NATO·나토) 정상회의를 앞두고 위협을 가하려는 목적"이라고 말했습니다.
+
+
+나토 정상회의는 오는 28일부터 30일까지 스페인 마드리드에서 열립니다.
+
+
+조 바이든 미국 대통령은 G7 정상회의를 앞두고 일어난 키이우 폭격에 대해 "야만에 가깝다"고 비난했습니다.
+
+
+볼로디미르젤렌스키 우크라이나 대통령은 러시아군이 발사한 62개 미사일 가운데 일부만 격추됐다고 말했습니다.
+
+
+러시아 국방부는 이번 공습은 우크라이나 군사 훈련소를 공격하기 위해 고정밀 무기를 사용했다고 주장했습니다.
+
+
+로이터 통신은 "러시아는 민간인 표적 공격을 부인하고 있지만 우크라이나와 서방은 러시아군의 전쟁 범죄로 수천 명이 숨지고 수백만 명이 피난길에 올랐다고 비난한다"고 전했습니다.
+</pre>
+ 
+ <script type="text/javascript">
+ let posY = 0;
+ function viewScroll(){
+	 window.scroll(0, posY);
+	 
+	 posY = posY + 2;
+	 if(posY == 300) posY = 0;
+	 
+	 setTimeout('viewScroll()', 100);
+ }
+ 
+ </script>
+-->
+
+<body>
+
+<!--  onblur : 포커스 이동  (포커스가 벗어나면, 즉 커서가 벗어나면  실행되는 것 )-->
+나이 : <input type="text" onblur="isRegAge()" size="10" maxlength="2">세 <br>
+<script type="text/javascript">
+function isRegAge(){
+	
+	alert('onblur 실행');
+	
+	
+}
+
+</script>
+
+<!-- onchange: 입력값이 변경되고 포커스가 이동시에 발생  -->
+우편번호 : <br>
+<input type="text" maxlength="3" size="5" onchange="isPostNum()">
+-
+<input type="text" maxlength="3" size="5" onchange="isPostNum()">
+
+<script type="text/javascript">
+function isPostNum(obj){
+	let str = obj.value;
+	
+	// alert(str);
+	if(str.match(/[^0-9]/g)){	// 숫자만 집어넣으세요
+		alert('문자가 포함되어 있습니다');
+	}
+}
+</script>
+ 
+<select id="sel" onchange="changeValue()">
+	<option value="apple">사과</option>
+	<option value="pear">배</option>
+	<option value="banana">바나나</option>
+</select>
+<script type="text/javascript">
+function changeValue(){
+	// alert('changeValue 호출');
+	
+	let val = document.getElementById('sel').value;
+	alert(val);
+}
+</script>
+<br><br>
+
+<!-- onkeydown, onkeypress -->
+<input type="text" name="title" >
+<script type="text/javascript">
+/*
+	document.getElementsByName("title")[0].onkeydown = function(event) {
+		console.log("keycode: " + event.keyCode); // ascii code
+		
+	}
+*/
+document.getElementsByName("title")[0].onkeypress = function(event) {
+	console.log("keycode: " + event.keyCode); // ascii code
+	
+}	
+</script>
+
+<!-- onMouseDown, OnMouseUp, onMouseOver, onMouseOut -->
+<input type="image" src="images/sam0.gif" 
+			onmousedown="mousedown(this)"
+			onmouseup="mouseup(this)"
+			onmouseover="mouseover(this)"
+			onmouseout="mouseout(this)">
+
+<script type="text/javascript">
+function mouseDown(obj) { // 마우스 포인터가 요소안으로 들어올 때 (마우스 클릭시)
+	obj.src = "images/san1.gif";
+}
+function mouseUp(obj) { // 마우스 버튼을 올릴 때(클릭한 걸 뗄 때)
+	obj.src = "images/san0.gif";
+}
+function mouseOver(obj){ // 마우스 포인터가 요소안으로 들어올 때 (마우스 올려 놨을 때)
+	obj.src = "images/san2.gif";
+}
+function mouseOut(obj){ // 마우스 포인터가 요소 밖으로 나갈 때 (마우스 땟을때)
+	obj.src = "images/san0.gif";
+}
+</script>
+
+<br><br>
+<a href="#" onmouseover="document.box.src='images/surprise.gif'" 
+			onmouseout="document.box.src='images/box.gif'">
+			<img alt="" src="images/box.gif" name="box">
+</a>			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

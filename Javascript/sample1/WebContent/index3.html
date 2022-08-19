@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo">p tag</p>	<!-- h1 ~ h6, p pre 일반 -->
+
+<input type="text" id="text" size="20" value="">	
+<br><br>
+
+<input type="button" value="입력" onclick="btnClick()">
+
+<script type="text/javascript">
+function btnClick() {
+	document.getElementById('demo').innerHTML = "button click!";
+	
+	document.getElementById('text').value = "버튼 클릭!";
+}
+</script>
+
+<br><br>
+
+<input type="button" value="클릭" onclick="btnFunc(1)">
+<br><br>
+<button type="button" onclick="btnFunc(2)">클릭</button>
+
+<script type="text/javascript">
+function btnFunc( n ) {
+	let name = '';
+	
+	if(n == 1){
+		name = 'input button click';
+	}else{
+		name = 'button click';
+	}
+	alert(name);
+	
+	document.getElementById('text').value = name; 
+}
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Bbs">
+
+<select id="bbslist" parameterType="lotte.com.a.dto.BbsParam" 
+	resultType="lotte.com.a.dto.BbsDto">
+
+	select seq, id, ref, step, depth, title, content, wdate, del, readcount
+	from 
+		(select row_number()over(order by ref desc, step asc) as rnum,
+			seq, id, ref, step, depth, title, content, wdate, del, readcount
+		 from bbs
+		 <if test="choice != null and choice != '' 
+		 			and search != null and search != '' ">
+		 	<if test="choice == 'title'">
+		 		where title like concat('%', #{search}, '%')
+		 	</if>
+		 	<if test="choice == 'content'">
+		 		where content like concat('%', #{search}, '%')
+		 	</if>
+		 	<if test="choice == 'writer'">
+		 		where id=#{id}
+		 	</if>		 			
+		 </if>
+		 order by ref desc, step asc) a 
+	where rnum between ${start} and ${end}
+</select>
+
+<!-- 글의 총수 -->
+<select id="getBbsCount" parameterType="lotte.com.a.dto.BbsParam" resultType="Integer">
+
+	select ifnull(count(*), 0)
+	from bbs
+	<if test="choice != null and choice != '' 
+		 			and search != null and search != '' ">
+	 	<if test="choice == 'title'">
+	 		where title like concat('%', #{search}, '%')
+	 	</if>
+	 	<if test="choice == 'content'">
+	 		where content like concat('%', #{search}, '%')
+	 	</if>
+	 	<if test="choice == 'writer'">
+	 		where id=#{id}
+	 	</if>		 			
+	 </if>
+</select>
+
+</mapper>
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+10진수 : <input type="text" id="num" size="20">
+<button type="button" onclick="func()">변환</button>
+<br><br>
+결과 : <input type="text" id="result">
+
+<script type="text/javascript">
+
+function func(){
+	let str = document.getElementById('num').value;		// input tag
+	// 문자열 -> 숫자
+	let num = parseInt(str);
+	
+	let num2 = num.toString(2);		// 2진수인 문자열로 바꾸어라
+	let obj = document.getElementById('result');
+	obj.value = num2;
+	
+	
+}
+
+</script>
+
+
+</body>
+</html>

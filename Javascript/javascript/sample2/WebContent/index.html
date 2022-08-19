@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<br>
+<button type="button" onclick="displayDate()">클릭</button>
+
+<script type="text/javascript">
+function displayDate() {
+	document.getElementById("demo").innerHTML = Date();
+}
+
+setInterval("displayDate()", 1000);
+</script>
+
+<br><br>
+<p id = "date"></p>
+
+<script type="text/javascript">
+	let d = new Date();
+	
+  	d = new Date(2022, 6-1, 27, 9, 15, 0, 0);
+	d = new Date("October 12, 2022 14:34:47");
+	document.getElementById('date').innerHTML = d;
+
+	document.getElementById('date').innerHTML = d.getFullYear();
+	document.getElementById('date').innerHTML = d.getMonth() + 1;
+	document.getElementById('date').innerHTML = d.getDate();
+	document.getElementById('date').innerHTML = d.getDay();		// 요일
+	document.getElementById('date').innerHTML = d.getHours();
+	document.getElementById('date').innerHTML = d.getMinutes();
+	document.getElementById('date').innerHTML = d.getSeconds();
+	// 경매 사이트는 모두 자바스크립트로 작성
+	
+	
+	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+let xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function () {
+	if(xhttp.readyState == 4 && xhttp.status == 200){
+		jsonFunc(this);
+	}
+}
+xhttp.open("GET", "member.json", true);
+xhttp.send();
+
+function jsonFunc( xhttp ) {	
+	// alert(xhttp.responseText);
+	
+	let jsonData = JSON.parse(xhttp.responseText);
+	// alert(jsonData);
+	// alert(jsonData.length);
+	
+	let txt = '';
+	/*
+	for (var i = 0; i < jsonData.length; i++) {
+		for(key in jsonData[i]){
+			txt += key + ":" + jsonData[i][key];
+		}
+		txt += "<br>";
+	}
+	*/
+	for (var i = 0; i < jsonData.length; i++) {
+		txt += jsonData[i].name + " " +
+				jsonData[i].age + " " +
+				jsonData[i].address + " " + 
+				jsonData[i].height + "<br>";
+	}
+	
+	document.getElementById('demo').innerHTML = txt;
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

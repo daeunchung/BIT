@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+	Access Attribute 접근 속성
+	
+	
+	id : 	현 문서에서 1개만 유효 (js에서 접근시 사용)
+	class : 다수의 태그에 설정. CSS 사용시 많이 사용, this -> className
+	name : 	다수의 태그에 설정. 데이터 전송용
+	
+ -->
+ 
+<!-- id tag 접근이 한개만 가능하다 -->
+<p id="pid">p tag id = pid</p>
+<p id="pid">p tag id = pid</p>
+<br>
+
+<!-- class tag 접근이 여러개 가능하다 -->
+<p class="cls">p tag class=cls</p>
+<p class="cls">p tag class=cls</p>
+<h3 class="cls">h3 tag class=cls</h3>
+
+<p name="name">p tag name=name</p>
+<h3 name="name">h3 tag name=name</h3>
+
+<button type="button" onclick="func()">button</button>
+
+<script type="text/javascript">
+function func(){
+	
+	document.getElementById('pid').innerHTML = 'p 태그입니다';
+	
+	document.getElementsByClassName('cls')[1].innerHTML = 'class 는 cls 입니다'
+	alert(document.getElementsByClassName('cls').length);
+	
+	document.getElementsByName('name')[1].innerHTML = "name";
+	/* name은 접근할때 많이 사용하지 않지만, 접근이 불가능한 것은 아니다. */
+}
+
+</script>
+<br><br>
+
+<div id="demo" style="background-color: #ffffff">Hello JS CSS</div>
+
+<button type="button" onclick="proc()">적용</button>
+<script type="text/javascript">
+function proc() {
+	let obj = document.getElementById('demo');
+	
+	/* object attribute property 순으로 접근 */
+	obj.style.color = "white";
+	obj.style.backgroundColor = "#0000ff";
+	obj.style.textAlign = "center";
+	obj.style.borderStyle = 'double';
+	obj.style.borderColor= 'red';
+	obj.style.fontFamily = 'MS PGothic';
+	obj.style.fontSize = '24pt';
+}
+
+</script>
+
+</body>
+</html>

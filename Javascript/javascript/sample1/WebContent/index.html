@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+// 여기가 Javascript 영역
+// 단 head 에 있는 script 는 딱 한번만 읽는다
+
+
+</script>
+
+</head>
+<body>
+<!-- 
+	Java Script(front end) != Java(back end)
+	
+	front end(웹브라우저, 화면)
+	목적 :	web접근
+			tag들을 접근하여 데이터를 취득, 수정
+			보조 프로그래밍 언어이다
+			컴파일을 하지 않는다 -> 빠르다 -> 가볍다
+			
+	TTS(Text to Speech) -> cloud (Restful)
+	
+	회원가입 -> 빈칸조사. id의 글자수 pw를 숫자 + 문자
+	CSS를 제어 , 구현
+	Timer 를 설정해서 특수효과들을 표현
+	
+	Java Script -> Jquery -> Angular(비추) -> load X
+					(ajax)   React (axios)  비동기통신의 중요성 : ajax 를 react에 맞춰서 만들어 놓은 simple ver이 바로 axios
+						     Vue
+	
+	function
+	class
+	
+	접근자 	Attribute(속성), Property(특성)
+	
+	<h3 id="myh3"></h3>
+	<h3 class="myh3cls">hello</h3>
+	<input type="text" name="name">
+	
+	element(요소)
+	id		->	1개	:	Javascript접근용
+	class	-> 	다수	:	Javascript접근용
+	name	-> 	다수	: 	link	http://localhost:8090/sample1?name=홍길동
+
+작성 중인 현재 html 파일은 document 라고 한다
+ -->
+ 
+<script type="text/javascript">
+
+</script>
+
+<p id="demo">hello java script</p>
+
+<script type="text/javascript">
+// 여기가 Javascript 영역 (실시간 update 가능)
+
+
+</script>
+
+<script type="text/javascript">
+// 여기가 Javascript 영역 (여러개 가능)
+
+/*
+ * 범위 주석문
+ 
+ */
+// console.log("Java Script가 실행되었습니다.");
+// alert('Java Script가 실행');
+
+var v = document.getElementById('demo').innerHTML; 	// getter
+// alert(v);	
+document.getElementById('demo').innerHTML = "안녕 자바스크립트";	// setter
+// 해당 기능의 함수들이 jQuery 인데 너무 무거워서 사용 도태
+// 그러나 그 와중에 가장 가장 중요하게 많이 사용하는 jquery 기능은 바로? AJAX
+
+
+</script>
+
+
+
+</body>
+</html>
